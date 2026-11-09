@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Зертханалық жұмыс № 9 — CI/CD</title>
+  <style>
+    :root {
+      --bg1: #eef2ff; --bg2: #fdf2f8; --card: #ffffffcc; --text: #1e1b4b;
+      --muted: #6b7280; --accent: #6366f1; --accent2: #ec4899; --ok: #16a34a;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg1: #0f172a; --bg2: #1e1b4b; --card: #1e293bcc; --text: #f1f5f9;
+        --muted: #94a3b8; --accent: #818cf8; --accent2: #f472b6; --ok: #4ade80;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; padding: 48px 16px;
+      font-family: "Segoe UI", system-ui, Arial, sans-serif; color: var(--text);
+      background: linear-gradient(135deg, var(--bg1), var(--bg2)) fixed;
+    }
+    .wrap { max-width: 860px; margin: 0 auto; }
+    header { text-align: center; margin-bottom: 36px; }
+    .badge {
+      display: inline-block; padding: 6px 16px; border-radius: 999px; font-size: 14px;
+      color: #fff; background: linear-gradient(90deg, var(--accent), var(--accent2));
+    }
+    h1 { font-size: clamp(28px, 5vw, 44px); margin: 16px 0 8px; }
+    .sub { color: var(--muted); font-size: 18px; margin: 0; }
+    .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .card {
+      background: var(--card); backdrop-filter: blur(8px); border-radius: 18px;
+      padding: 22px; box-shadow: 0 8px 30px rgba(99, 102, 241, .15);
+      border: 1px solid rgba(99, 102, 241, .2);
+    }
+    .card .icon { font-size: 34px; }
+    .card h3 { margin: 10px 0 6px; }
+    .card p { margin: 0; color: var(--muted); line-height: 1.5; }
+    .status { margin-top: 12px; color: var(--ok); font-weight: 600; }
+    .team { margin-top: 36px; text-align: center; }
+    .team h2 { margin-bottom: 14px; }
+    .names { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .name {
+      padding: 12px 26px; border-radius: 14px; font-weight: 600; font-size: 18px;
+      background: var(--card); border: 1px solid rgba(236, 72, 153, .35);
+    }
+    footer { text-align: center; margin-top: 40px; color: var(--muted); font-size: 14px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <span class="badge">Зертханалық жұмыс № 9</span>
+      <h1>CI/CD негіздері</h1>
+      <p class="sub">GitHub Actions көмегімен үздіксіз интеграция және жеткізу</p>
+    </header>
+
+    <section class="grid">
+      <div class="card">
+        <div class="icon">🔨</div>
+        <h3>Build</h3>
+        <p>Код репозиторийге түскен сайын жоба автоматты түрде жиналады.</p>
+        <div class="status">✔ Сәтті</div>
+      </div>
+      <div class="card">
+        <div class="icon">🧪</div>
+        <h3>Test</h3>
+        <p>Өзгерістер автоматты түрде тексеріліп, қателер ерте анықталады.</p>
+        <div class="status">✔ Сәтті</div>
+      </div>
+      <div class="card">
+        <div class="icon">🚀</div>
+        <h3>Deploy</h3>
+        <p>Тексерілген жоба дайын ортаға автоматты түрде жеткізіледі.</p>
+        <div class="status">✔ Сәтті</div>
+      </div>
+    </section>
+
+    <section class="team">
+      <h2>Орындаған студенттер</h2>
+      <div class="names">
+        <div class="name">👩‍💻 Мөлдір</div>
+        <div class="name">👩‍💻 Аяулым</div>
+      </div>
+    </section>
+
+    <footer>GitHub Actions · CI/CD Pipeline · 2026</footer>
+  </div>
+</body>
+</html>
